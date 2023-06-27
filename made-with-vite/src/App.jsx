@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import * as React from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const list = [
+  {
+    id: 1,
+    title:'React is Fun',
+    author: 'Rene',
+},
+{
+  id: 2,
+  title:'React is Fun',
+  author: 'Rene',
+},
+]
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+const title = 'React';
+
+const welcome = {
+  greeting: 'Hey',
+  title: 'React',
+}
+
+function App(){
+
+  function getTitle(title) {
+    return title;
+  }
+
+  return(
+    <div>
+
+      <h1>Hello , {getTitle('Rene')} </h1>
+      <h1>Hello, {title}</h1>
+      <label htmlFor=""></label>
+      <input id='search' type="text" />
+
+    {welcome.greeting}
+
+
+    <hr/>
+
+    <ul>
+      {list.map(function (item) {
+        return <li key={item.id}>
+          <span>{item.id}</span>
+          <span> {item.title}</span>
+          <span> {item.author}</span>
+          </li>
+      })}
+    </ul>
+
+    </div>
   )
 }
 
-export default App
+export default App;
