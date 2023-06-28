@@ -1,14 +1,13 @@
-import GoalOne from './GoalOne';
-import GoalTwo from './GoalTwo';
+import GoalItem from './GoalItem';
 
-import GoalThree from './GoalThree';
-
-function GoalList() {
+function GoalList(props) {
     return (
         <>
-        <GoalOne/>
-        <GoalTwo/>
-        <GoalThree/>
+        <GoalItem id='1' title='First Goal' text="I'm the first Goal" />
+
+        <GoalItem id='2' title='Second Goal' text="I'm the second Goal" />
+
+        <GoalItem id='3' title='Third Goal' text="I'm the Third Goal" />
         </>
     )
 }
