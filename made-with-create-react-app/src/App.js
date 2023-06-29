@@ -2,6 +2,7 @@ import './App.css';
 import GoalList from './components/GoalList';
 import Header from './components/Header';
 import CalculatorAdd from './components/Calculator';
+import TermsOfUse from './components/TermsOfUse';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
     <GoalList/>
 
     <CalculatorAdd/>
+
+    <TermsOfUse/>
 
     </div>
   );
